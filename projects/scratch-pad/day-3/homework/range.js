@@ -23,10 +23,16 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    var arr = [];
+    if (start < end) {
+        for (var i = start; i <= end; i++) {
+            arr.push(i);
+        }
+    } else {
+        for (var i = start.length - 1; i >= end; i--) {
+            arr.push(i);
+        }
+    }
     // YOUR CODE GOES ABOVE HERE //
 }
 

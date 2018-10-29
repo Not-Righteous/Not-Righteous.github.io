@@ -33,3 +33,21 @@ console.log(myName); // prints => bob
 var myVariable = 1;
 var myVariable = true;
 myVariable = "someString";
+
+/*
+  1. Var, Let, Const
+    - Var
+      ~ Var defines a variable globally, or locally to an entire function regardless of block scope.
+      ~ Var Example:
+        - var gameType = "RPG";
+    - Let
+      ~ Let allows one to declare variables that are limited in scope to the block, statement, or expression on which it is used.
+      ~ Let Example:
+        - var x = 8;
+        let x = 32;
+    - Const
+      ~ Constants are block-scoped.
+      ~ The value of a const cannot be changed through reassignment, nor can it be redeclared.
+  2. Hoisting
+    - Hoisting is the default behavior of moving declarations to the top.
+*/

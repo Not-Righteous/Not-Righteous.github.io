@@ -14,10 +14,12 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    // checking to see if the value is an array by using Array.isArray //
+    if (Array.isArray(value)) {
+        return true;
+    } else {
+        return false;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -31,10 +33,21 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if (Array.isArray(value)) {
+        return false;
+    } else if (typeof(value) === 'string') {
+        return false;
+    } else if (typeof(value) === 'number') {
+        return false;
+    } else if (value instanceof Date) {
+        return false;
+    } else if (value === null) {
+        return false;
+    } else if (typeof(value) === 'boolean') {
+        return false;
+    } else {
+        return true;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -46,10 +59,19 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if (value === null) {
+        return false;
+    } else if (typeof(value) === 'boolean') {
+        return false;
+    } else if (typeof(value) === 'number') {
+        return false;
+    } else if (typeof(value) === 'string') {
+        return false;
+    } else if (value instanceof Date) {
+        return false;
+    } else {
+        return true;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -57,15 +79,15 @@ function isCollection(value) {
  * Given an input value, return the type of the value as a String
  * 
  * Types are one of: 
- *    - "string"
- *    - "array"
+ *    - "string" .
+ *    - "array" .
  *    - "object"
  *    - "undefined"
- *    - "number"
- *    - "boolean"
- *    - "null"
- *    - "function"
- *    - "date"
+ *    - "number" .
+ *    - "boolean" .
+ *    - "null" .
+ *    - "function" .
+ *    - "date" .
  * 
  * Examples:
  *    typeOf(134) -> "number"
@@ -74,10 +96,25 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if (typeof(value) === "string") {
+        return "string";
+    } else if (Array.isArray(value)) {
+        return "array";
+    } else if (typeof(value) === "boolean") {
+        return "boolean";
+    } else if (typeof(value) === "number") {
+        return "number";
+    } else if (value === null) {
+        return "null";
+    } else if (value instanceof Date) {
+        return "date";
+    } else if (value instanceof Function) {
+        return "function";
+    } else if (typeof(value) === "undefined") {
+        return "undefined";
+    } else {
+        return "object";
+    }
     // YOUR CODE ABOVE HERE //
 }
 
